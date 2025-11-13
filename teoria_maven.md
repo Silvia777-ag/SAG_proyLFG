@@ -1,27 +1,19 @@
-Git es un software de control de versiones gratis y de código abierto, sencilla y facil de usar que los desarrolladores instalan localmente en sus ordenadores personales.  Fue creado por Linus Torvalds en 2005.  Esto significa básicamente que Git es un rastreador de contenido. Así que Git puede ser utilizado para almacenar contenido en nuestro caso código. 
+MAVEN es una herramienta Java que automatiza el proceso de compilación y gestión de un proyecto Java.  Se encarga de descargar las dependencias (librerías de Java), compilar el código, ejecutar pruebas y empaquetar el proyecto. Utiliza un archivo pom.xml para configurar el proyecto, sus dependencias y el ciclo de vida de compilación.  
 
-GitHub es un servicio de control de versiones basado en Git.  Se utiliza para almacenar el código (guarda el código fuente del proyecto en la nube) y controla los cambios (permite rastrear las modificaciones a lo largo del tiempo).
+Visual Studio Code se utiliza como editor de código para escribir el código Java y, gracias a la extensión de Maven, se puede interactuar con el proyecto gestionando dependencias y ejecutando tareas. GitHub se usa para el control de versiones, permitiendo a los desarrolladores colaborar y almacenar el código de forma remota.
 
-Git se utiliza a traves de una interfaz de linea de comandos basicos:
-git config --global user.name "Tu nombre"
-git config --global user.email "tu_email@example.com": Configurar tu nombre de usuario y correo electrónico para que Git pueda identificarte en cada cambio que realices.
-git init: Inicializa un nuevo repositorio Git en un directorio existente.
-git status: Muestra el estado actual de los archivos en el directorio, indicando los que han sido modificados, añadidos o no rastreados.
-git add <nombre_del_archivo> o git add .: Agrega los cambios de uno o más archivos (o todos) al "staging area" (un área de preparación para el próximo "commit").
-git commit -m "Mensaje descriptivo": Guarda los cambios preparados en el historial del proyecto con un mensaje que describe lo que se hizo.
-git log: Muestra el historial de todos los "commits" realizados.
-git push origin <nombre_rama>: Envía los "commits" locales a un repositorio remoto (como GitHub).
-git clone <URL>: Clona un repositorio remoto existente a tu máquina local.
+COMO USAR Definir dependencias en pom.xml.  El archivo pom.xml (Project Object Model) es central en Maven. En él se especifican las dependencias (bibliotecas externas) que el proyecto necesita. Maven se encargará de descargar automáticamente las versiones correctas.
 
-Git se usa para gestionar el historial de un proyecto, colaborar con otros y revertir a versiones anteriores.  Detallamos:
-Historial completo: Git toma "instantáneas" (commits) del proyecto en diferentes momentos, lo que permite rastrear y revisar cada cambio realizado.
-Reversión de cambios: Si introduces un error, puedes volver fácilmente a una versión anterior y funcional del proyecto.
-Colaboración: Facilita que múltiples personas trabajen en el mismo proyecto simultáneamente, fusionando sus contribuciones sin entrar en conflicto.
-Ramificación: Permite crear ramas separadas para trabajar en nuevas funcionalidades o experimentar sin afectar el código principal. Las ramas son fáciles de crear y fusionar.
-Flexibilidad: Es un sistema distribuido, lo que significa que cada copia local del repositorio es un repositorio completo y funcional. Puedes trabajar incluso sin conexión a internet.
+Utilizar comandos de la línea de comandos, que interactúa con Maven a través de la terminal usando comandos como mvn (por ejemplo, mvn clean, mvn compile, mvn test, mvn package).
+Estandarizar la estructura, Maven usa convenciones sobre la estructura de directorios, lo que simplifica la configuración. La mayoría de las veces, solo se necesita definir las excepciones en el pom.xml
 
-Git cuando usar.   En el desarrollo de software, pero también es útil para otros tipos de archivos.
-Desarrollo de software: Es una herramienta estándar en la industria para gestionar el código fuente de cualquier proyecto, desde pequeños hasta grandes proyectos.
-Cualquier proyecto con archivos que cambian: Aunque es más conocido en el ámbito de la programación, es útil para cualquier tipo de archivo que evolucione, como documentos, configuraciones, o incluso proyectos creativos.
-Trabajo en equipo: Siempre que se trabaje en un proyecto de forma colaborativa, es esencial para coordinar los cambios y evitar conflictos.
-Proyectos personales: Para tener un historial organizado de tu propio trabajo, poder volver atrás si cometes un error y para acostumbrarte a una práctica profesional estándar.
+POR QUE USAR Para automatizar tareas repetitivas, estandarizar la estructura del proyecto y gestionar librerías de forma eficiente, especialmente en proyectos grandes con múltiples dependencias.
+Automatización de tareas, automatiza procesos repetitivos como compilar código, ejecutar pruebas, empaquetar la aplicación (en formatos como JAR o WAR) y desplegarla, liberando tiempo de los desarrolladores.
+Gestión de dependencias, resuelve el complejo problema de gestionar bibliotecas externas, descargándolas automáticamente y gestionando los conflictos de versiones.
+Estandarización y colaboración, proporciona una estructura de proyecto estándar que facilita la colaboración entre equipos, ya que todos trabajan con la misma organización y configuración.
+Gestión del ciclo de vida del proyecto, permite gestionar todo el ciclo de vida del proyecto, desde la compilación y pruebas hasta la generación de informes y la distribución.
+
+CUANDO USAR Debe usarse cuando se busca una forma estandarizada y automatizada de gestionar el ciclo de vida del proyecto, incluyendo la gestión de dependencias, para optimizar la colaboración y la productividad del equipo.
+En Proyectos con muchas dependencias, es especialmente útil en proyectos que dependen de muchas bibliotecas o marcos de trabajo, ya que simplifica enormemente la gestión de estas dependencias.
+En Proyectos que siguen convenciones, cuando el proyecto no requiere una configuración muy personalizada, se puede aprovechar al máximo el enfoque de "convención sobre configuración" de Maven.
+En Proyectos de equipo o empresariales, es una excelente inversión de tiempo en proyectos de equipo o a largo plazo, ya que la estandarización mejora la colaboración y la mantenibilidad a lo largo del tiempo.

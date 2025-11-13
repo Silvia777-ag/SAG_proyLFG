@@ -1,27 +1,19 @@
-Git es un software de control de versiones gratis y de código abierto, sencilla y facil de usar que los desarrolladores instalan localmente en sus ordenadores personales.  Fue creado por Linus Torvalds en 2005.  Esto significa básicamente que Git es un rastreador de contenido. Así que Git puede ser utilizado para almacenar contenido en nuestro caso código. 
+UNIT TESTING es una técnica de prueba que valida el funcionamiento de las unidades de código más pequeñas y aisladas, como funciones o métodos, para garantizar que se comporten como se espera. 
 
-GitHub es un servicio de control de versiones basado en Git.  Se utiliza para almacenar el código (guarda el código fuente del proyecto en la nube) y controla los cambios (permite rastrear las modificaciones a lo largo del tiempo).
+COMO USAR escribiendo código de prueba que define una entrada esperada y valida la salida en el código a probar.  Procedimiento identificar la unidad: Elige el componente más pequeño que quieres probar (una función, un método, una clase).  Escribir el código de prueba: 
+Crea un script de prueba que: configure el entorno necesario, ejecute la unidad de código con una entrada específica, valide que la salida obtenida coincide con el resultado esperado, ejecutar el código de prueba y verifica si pasa o falla.
 
-Git se utiliza a traves de una interfaz de linea de comandos basicos:
-git config --global user.name "Tu nombre"
-git config --global user.email "tu_email@example.com": Configurar tu nombre de usuario y correo electrónico para que Git pueda identificarte en cada cambio que realices.
-git init: Inicializa un nuevo repositorio Git en un directorio existente.
-git status: Muestra el estado actual de los archivos en el directorio, indicando los que han sido modificados, añadidos o no rastreados.
-git add <nombre_del_archivo> o git add .: Agrega los cambios de uno o más archivos (o todos) al "staging area" (un área de preparación para el próximo "commit").
-git commit -m "Mensaje descriptivo": Guarda los cambios preparados en el historial del proyecto con un mensaje que describe lo que se hizo.
-git log: Muestra el historial de todos los "commits" realizados.
-git push origin <nombre_rama>: Envía los "commits" locales a un repositorio remoto (como GitHub).
-git clone <URL>: Clona un repositorio remoto existente a tu máquina local.
+TEST DOUBLES (dobles de prueba) se usa si la unidad depende de otras partes del sistema, usa test doublés como mocks o stubs para aislar la unidad que estás probando.
 
-Git se usa para gestionar el historial de un proyecto, colaborar con otros y revertir a versiones anteriores.  Detallamos:
-Historial completo: Git toma "instantáneas" (commits) del proyecto en diferentes momentos, lo que permite rastrear y revisar cada cambio realizado.
-Reversión de cambios: Si introduces un error, puedes volver fácilmente a una versión anterior y funcional del proyecto.
-Colaboración: Facilita que múltiples personas trabajen en el mismo proyecto simultáneamente, fusionando sus contribuciones sin entrar en conflicto.
-Ramificación: Permite crear ramas separadas para trabajar en nuevas funcionalidades o experimentar sin afectar el código principal. Las ramas son fáciles de crear y fusionar.
-Flexibilidad: Es un sistema distribuido, lo que significa que cada copia local del repositorio es un repositorio completo y funcional. Puedes trabajar incluso sin conexión a internet.
+POR QUÉ USAR para detectar errores tempranamente, mejorar el diseño del código, asegurar la calidad y facilitar la refactorización sin introducir regresiones. 
+Para la detección temprana de errores, identifica fallas en el código rápidamente, antes de que se integren con el resto del sistema.
+Mejora el diseño, obliga a escribir código más modular y desacoplado, ya que cada unidad debe ser fácil de probar de forma aislada.
+Previene regresiones, si un error corregido reaparece, las pruebas fallarán, evitando que la versión defectuosa llegue a producción.
+Facilita la refactorización, permite reestructurar el código de forma segura, sabiendo que las pruebas seguirán validando la funcionalidad existente.
+Proporciona confianza aumenta la seguridad al realizar cambios, ya que se tiene un conjunto de pruebas automatizadas que verifican el correcto funcionamiento.
 
-Git cuando usar.   En el desarrollo de software, pero también es útil para otros tipos de archivos.
-Desarrollo de software: Es una herramienta estándar en la industria para gestionar el código fuente de cualquier proyecto, desde pequeños hasta grandes proyectos.
-Cualquier proyecto con archivos que cambian: Aunque es más conocido en el ámbito de la programación, es útil para cualquier tipo de archivo que evolucione, como documentos, configuraciones, o incluso proyectos creativos.
-Trabajo en equipo: Siempre que se trabaje en un proyecto de forma colaborativa, es esencial para coordinar los cambios y evitar conflictos.
-Proyectos personales: Para tener un historial organizado de tu propio trabajo, poder volver atrás si cometes un error y para acostumbrarte a una práctica profesional estándar.
+CUÁNDO USAR Durante todo el ciclo de desarrollo, especialmente cuando se escribe una nueva unidad de código o se corrigen errores, y de forma automatizada antes de realizar cambios o despliegues. 
+Antes de implementar una nueva funcionalidad, escribe las pruebas unitarias para la nueva unidad de código.
+Al corregir un bug, crea una prueba unitaria que reproduzca el error antes de corregirlo.  De esta manera, la prueba fallará y, al corregir el código, la prueba pasará, asegurando que el error no reaparecerá.
+Durante la integración, asegura que cada módulo funcione correctamente antes de integrarlo con otros componentes del sistema.
+Como parte del proceso de despliegue, integra las pruebas automatizadas en tu flujo de integración continua para que se ejecuten automáticamente cada vez que se realiza un cambio en el código o antes de desplegar una nueva versión.
